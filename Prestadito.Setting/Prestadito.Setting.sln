@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prestadito.Setting.API", "Prestadito.Setting.API.csproj", "{32D8366D-5E11-40DD-9B35-604B92754EFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application", "2. Application", "{33D568A3-126F-4127-9471-4C454C573214}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Domain", "3. Domain", "{6FDF5C4B-3386-481B-96D9-30B4A8B3B6A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infrastructure", "4. Infrastructure", "{F62E575A-5DAC-4D34-8FB4-DF8D5372A1E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prestadito.Setting.Application.Dto", "..\Prestadito.Setting.Application.Dto\Prestadito.Setting.Application.Dto.csproj", "{B088BA9B-7A9A-4EC3-BB09-DE125FA6D488}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prestadito.Setting.Application.Manager", "..\Prestadito.Setting.Application.Manager\Prestadito.Setting.Application.Manager.csproj", "{5B0C6DBA-E7B9-42DB-9A50-30A67ED0F527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prestadito.Setting.Application.Services", "..\Prestadito.Setting.Application.Services\Prestadito.Setting.Application.Services.csproj", "{90B4FAF7-BB55-455A-9E78-2DD17F277DED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prestadito.Setting.Domain.MainModule", "..\Prestadito.Setting.Domain.MainModule\Prestadito.Setting.Domain.MainModule.csproj", "{EFC363FC-1F13-4222-90F7-3A778FAD4721}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prestadito.Setting.Infrastructure.Data", "..\Prestadito.Setting.Infrastructure.Data\Prestadito.Setting.Infrastructure.Data.csproj", "{D3A492D0-ED03-4B9E-8E9D-7B872C618930}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prestadito.Setting.Infrastructure.MainModule", "..\Prestadito.Setting.Infrastructure.MainModule\Prestadito.Setting.Infrastructure.MainModule.csproj", "{CC1879D3-22CE-463E-AD28-8526B7263C77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32D8366D-5E11-40DD-9B35-604B92754EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32D8366D-5E11-40DD-9B35-604B92754EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32D8366D-5E11-40DD-9B35-604B92754EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32D8366D-5E11-40DD-9B35-604B92754EFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B088BA9B-7A9A-4EC3-BB09-DE125FA6D488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B088BA9B-7A9A-4EC3-BB09-DE125FA6D488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B088BA9B-7A9A-4EC3-BB09-DE125FA6D488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B088BA9B-7A9A-4EC3-BB09-DE125FA6D488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B0C6DBA-E7B9-42DB-9A50-30A67ED0F527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0C6DBA-E7B9-42DB-9A50-30A67ED0F527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0C6DBA-E7B9-42DB-9A50-30A67ED0F527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0C6DBA-E7B9-42DB-9A50-30A67ED0F527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90B4FAF7-BB55-455A-9E78-2DD17F277DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90B4FAF7-BB55-455A-9E78-2DD17F277DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90B4FAF7-BB55-455A-9E78-2DD17F277DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90B4FAF7-BB55-455A-9E78-2DD17F277DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC363FC-1F13-4222-90F7-3A778FAD4721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC363FC-1F13-4222-90F7-3A778FAD4721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC363FC-1F13-4222-90F7-3A778FAD4721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC363FC-1F13-4222-90F7-3A778FAD4721}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3A492D0-ED03-4B9E-8E9D-7B872C618930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3A492D0-ED03-4B9E-8E9D-7B872C618930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3A492D0-ED03-4B9E-8E9D-7B872C618930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3A492D0-ED03-4B9E-8E9D-7B872C618930}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC1879D3-22CE-463E-AD28-8526B7263C77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC1879D3-22CE-463E-AD28-8526B7263C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC1879D3-22CE-463E-AD28-8526B7263C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC1879D3-22CE-463E-AD28-8526B7263C77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B088BA9B-7A9A-4EC3-BB09-DE125FA6D488} = {33D568A3-126F-4127-9471-4C454C573214}
+		{5B0C6DBA-E7B9-42DB-9A50-30A67ED0F527} = {33D568A3-126F-4127-9471-4C454C573214}
+		{90B4FAF7-BB55-455A-9E78-2DD17F277DED} = {33D568A3-126F-4127-9471-4C454C573214}
+		{EFC363FC-1F13-4222-90F7-3A778FAD4721} = {6FDF5C4B-3386-481B-96D9-30B4A8B3B6A0}
+		{D3A492D0-ED03-4B9E-8E9D-7B872C618930} = {F62E575A-5DAC-4D34-8FB4-DF8D5372A1E2}
+		{CC1879D3-22CE-463E-AD28-8526B7263C77} = {F62E575A-5DAC-4D34-8FB4-DF8D5372A1E2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60EF0F23-C084-4D5D-8769-9F3FD674C86F}
+	EndGlobalSection
+EndGlobal
