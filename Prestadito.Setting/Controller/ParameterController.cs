@@ -1,12 +1,4 @@
-﻿using Prestadito.Setting.Application.Dto.Parameter;
-using Prestadito.Setting.Application.Manager.Interfaces;
-using Prestadito.Setting.Application.Manager.Models;
-using Prestadito.Setting.Application.Manager.Utilities;
-using Prestadito.Setting.Application.Services.Interfaces;
-using Prestadito.Setting.Domain.MainModule.Entities;
-using System.Linq.Expressions;
-
-namespace Prestadito.Setting.API.Controller
+﻿namespace Prestadito.Setting.API.Controller
 {
     public class ParameterController: IParametersController
     {
