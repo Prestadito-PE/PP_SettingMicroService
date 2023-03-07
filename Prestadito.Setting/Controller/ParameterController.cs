@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 
 namespace Prestadito.Setting.API.Controller
 {
-    public class ParameterController: IParametersController
+    public class ParameterController : IParametersController
     {
         private readonly IParameterRepository ParameterRepository;
         public ParameterController(IDataService dataService)
@@ -130,6 +130,44 @@ namespace Prestadito.Setting.API.Controller
             }
 
             Expression<Func<ParameterEntity, bool>> filter = f => f.Id == id;
+            var entity = await ParameterRepository.GetAsync(filter);
+            if (entity is null)
+            {
+                responseModel = ResponseModel<ParameterModel>.GetResponse("Parameter not found");
+                return Results.NotFound(responseModel);
+            }
+
+            var ParameterModelItem = new ParameterModel
+            {
+                Id = entity.Id,
+                StrCode = entity.StrCode,
+                StrDescription = entity.StrDescription,
+                StrName = entity.StrName,
+                StrParentCode = entity.StrParentCode,
+                StrType = entity.StrType,
+                StrValue = entity.StrValue,
+                BlnActive = entity.BlnActive,
+                StrCreateUser = entity.StrCreateUser,
+                DteCreatedAt = entity.DteCreatedAt,
+                StrUpdateUSer = entity.StrUpdateUser,
+                DteUpdatedAt = entity.DteUpdatedAt
+            };
+
+            responseModel = ResponseModel<ParameterModel>.GetResponse(ParameterModelItem);
+            return Results.Json(responseModel);
+        }
+
+        public async ValueTask<IResult> GetParameterByCode(string code)
+        {
+            ResponseModel<ParameterModel> responseModel;
+
+            if (string.IsNullOrWhiteSpace(code))
+            {
+                responseModel = ResponseModel<ParameterModel>.GetResponse("Code is empty");
+                return Results.BadRequest(responseModel);
+            }
+
+            Expression<Func<ParameterEntity, bool>> filter = f => f.StrCode == code;
             var entity = await ParameterRepository.GetAsync(filter);
             if (entity is null)
             {

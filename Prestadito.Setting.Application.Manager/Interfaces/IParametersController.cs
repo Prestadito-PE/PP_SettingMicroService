@@ -9,6 +9,7 @@ namespace Prestadito.Setting.Application.Manager.Interfaces
         ValueTask<IResult> GetAllParameters();
         ValueTask<IResult> GetActiveParameters();
         ValueTask<IResult> GetParameterById(string id);
+        ValueTask<IResult> GetParameterByCode(string code);
         ValueTask<IResult> UpdateParameter(UpdateParameterDTO dto);
         ValueTask<IResult> DisableParameter(string id);
         ValueTask<IResult> DeleteParameter(string id);
