@@ -9,7 +9,7 @@ namespace Prestadito.Setting.Application.Manager.Endpoints
         {
             app.UseHealthEndpoints();
             app.UseParameterEndpoint(basePath);
-            app.UseEndpointInterservices(basePath);
+            app.UseParameterEndpointInterservices(basePath);
             return app;
         }
     }

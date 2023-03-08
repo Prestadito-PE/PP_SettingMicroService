@@ -1,6 +1,6 @@
 ﻿namespace Prestadito.Setting.Application.Manager.Utilities
 {
-    public class ResponseModel<T> where T: class
+    public class ResponseModel<T> where T : class
     {
         public T Item { get; set; } = null!;
         public List<T> Items { get; set; } = null!;

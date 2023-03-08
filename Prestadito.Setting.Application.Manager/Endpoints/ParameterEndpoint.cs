@@ -21,7 +21,7 @@ namespace Prestadito.Setting.Application.Manager.Endpoints
                     {
                         return Results.ValidationProblem(validationResult.ToDictionary());
                     }
-                    return await controller.CreateParameter(dto, $"~/{path}");
+                    return await controller.CreateParameter(dto, $"~{path}");
                 });
 
             app.MapGet(path + "/all",
@@ -56,21 +56,19 @@ namespace Prestadito.Setting.Application.Manager.Endpoints
             app.MapPut(path + "/disable/{id}",
                 async (string id, IParametersController controller) =>
                 {
-                    var response = await controller.DisableParameter(id);
-                    return response != null ? Results.Ok(response) : Results.UnprocessableEntity(response);
+                    return await controller.DisableParameter(id);
                 });
 
             app.MapDelete(path + "/delete/{id}",
                 async (string id, IParametersController controller) =>
                 {
-                    var response = await controller.DeleteParameter(id);
-                    return response != null ? Results.Ok(response) : Results.UnprocessableEntity(response);
+                    return await controller.DeleteParameter(id);
                 });
 
             return app;
         }
 
-        public static WebApplication UseEndpointInterservices(this WebApplication app, string basePath)
+        public static WebApplication UseParameterEndpointInterservices(this WebApplication app, string basePath)
         {
             string path = $"{basePath}/interservices/{collection}";
 

@@ -12,8 +12,6 @@ namespace Prestadito.Setting.API
 {
     public static class WebApplicationHelper
     {
-        readonly static string myCors = "myCors";
-
         public static WebApplication CreateWebApplication(this WebApplicationBuilder builder)
         {
             var provider = builder.Services.BuildServiceProvider();
@@ -40,29 +38,18 @@ namespace Prestadito.Setting.API
             builder.Services.AddHealthChecks()
                 .AddCheck<MongoDBHealthCheck>(nameof(MongoDBHealthCheck));
 
-            builder.Services.AddCors(options =>
-            {
-                var urlList = configuration.GetSection("AllowedOrigin").GetChildren().Select(c => c.Value).ToArray();
-                options.AddPolicy(myCors,
-                    builder => builder.WithOrigins(urlList)
-                        .AllowAnyMethod()
-                        .AllowAnyHeader()
-                        .AllowCredentials());
-            });
-
             return builder.Build();
         }
 
         public static WebApplication ConfigureWebApplication(this WebApplication app)
         {
-            if (app.Environment.IsDevelopment())
+            if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
-            app.UseCors(myCors);
-            app.UseSettingEndpoint(myCors);
+            app.UseSettingEndpoint();
 
             return app;
         }
