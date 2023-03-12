@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Prestadito.Setting.Application.Dto\Prestadito.Setting.Application.Dto.csproj" />
+    <ProjectReference Include="..\Prestadito.Setting.Infrastructure.MainModule\Prestadito.Setting.Infrastructure.MainModule.csproj" />
+  </ItemGroup>
+
+</Project>
