@@ -34,6 +34,19 @@ namespace Prestadito.Setting.API
                 {
                     Version = "v1",
                     Title = "Prestadito.Micro.Setting.API",
+                    Description = "ASP.NET Core Web API Control Schedule System",
+                    TermsOfService = new Uri("https://prestadito.pe/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Prestadito.pe",
+                        Email = "contacto@prestadito.pe",
+                        Url = new Uri("https://prestadito.pe"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Use under LICX",
+                        Url = new Uri("https://prestadito.pe"),
+                    }
                 });
             });
 
@@ -55,11 +68,14 @@ namespace Prestadito.Setting.API
 
         public static WebApplication ConfigureWebApplication(this WebApplication app)
         {
-            if (app.Environment.IsDevelopment())
+            //if (app.Environment.IsDevelopment())
+            //{
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
             {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+                options.SwaggerEndpoint("v1/swagger.json", "Prestadito.Micro.Setting.API");
+            });
+            //}
 
             app.UseCors(myCors);
             app.UseSettingEndpoint(myCors);
